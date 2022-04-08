@@ -7,7 +7,7 @@ class DBHelpers {
     return sql.openDatabase(path.join(dbpath, 'places.dart'),
         onCreate: (db, version) {
       return db.execute(
-        'CREATE TABLE Images(id TEXT PRIMARY KEY, title TEXT, image TEXT,)',
+        'CREATE TABLE Images(id TEXT PRIMARY KEY, title TEXT, image TEXT)',
       );
     }, version: 1);
   }

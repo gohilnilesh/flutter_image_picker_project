@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_image_picker_project/screens/crop_image_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'providers/image_provider.dart';
 import './screens/images_list_screen.dart';
 import 'screens/add_image_screen.dart';
-import './widgets/crop_image.dart' as crp;
 
 void main() => runApp(MyApp());
 
@@ -21,10 +19,9 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.indigo,
             accentColor: Colors.amber,
           ),
-          home: CropImageScreen(isGallery: crp.isGallery),
+          home: ImagesListScreen(),
           routes: {
             AddImageScreen.routeName: (ctx) => AddImageScreen(),
-            ImagesListScreen.routeName: (ctx) => ImagesListScreen(),
           }),
     );
   }
